@@ -89,18 +89,21 @@ body {
     background-color: #1783f7;
     border: solid black ;
     color: rgba(255, 255, 255, 0.911);
-    border-radius: 35px;
+    border-radius: 45px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
 }
 
 .titulo h1{
     text-transform: uppercase;
-    font-family: 'Pokefont';
+    font-family: 'Subrayada';
     font-weight: bold;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #000000;
 }
 
 main {
+    margin-top: 50px;
     background-color: white;
     border-radius: 8px;
     padding: 20px;
@@ -132,13 +135,39 @@ main {
     height: auto;
 }
 
+.info-title{
+    margin-bottom: 0;
+    width: 10%;
+    margin-bottom: 10px;
+}
+
+.info-title img{
+    width: 50px;
+    height: 50px;
+}
+
 .info-text {
     margin-top: 20px;
-    background-color: rgb(196, 196, 196);
+    background-color: rgb(196, 196, 196, 0.6);
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 15px;
+    font-family: 'Pokefont';
+}
+
+.info-titulos ul{
+    justify-content: space-between;
+    width: 100%;
+}
+
+.info-titulos ul:first-child{
+    color: rgb(50, 156, 255);
 }
 
 .info-text p {
-    font-size: 18px;
+    font-size: 20px;
+    align-items: start;
 }
 
 .info-text ul {
@@ -147,8 +176,9 @@ main {
 }
 
 .info-text ul li {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 5px;
+    
 }
 
 .evolution {
@@ -173,13 +203,15 @@ main {
     margin-top: 20px;
     text-align: center;
     font-family: 'Subrayada';
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000000;
 }
 
 .type {
     padding: 8px 30px;
     margin: 5px;
     font-size: 25px;
-    border: 1;
+    border-width: 2px;
     border-color: black;
     border-radius: 35px;
     cursor: pointer;
