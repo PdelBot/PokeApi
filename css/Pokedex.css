@@ -77,10 +77,10 @@
 }
 
 .pokemon-grid {
-    margin: 20px; /* Agrega margen a la sección */
+    margin: 20px; 
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Ajusta a 4 tarjetas por fila */
-    gap: 20px; /* Mantén un buen espaciado entre las tarjetas */
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 20px;  
 }
 
 .pokemon-card {
@@ -94,7 +94,7 @@
 
  
 .pokemon-card img {
-    width: 150px; /* Aumenta el tamaño de las imágenes */
+    width: 150px;  
     height: auto;
     margin-bottom: 10px;
 }
@@ -113,8 +113,8 @@
 } 
 
 .tipos {
-    width: 100%; /* Aumenta el ancho del div para que ocupe más espacio */
-    justify-content: center; /* Centra los elementos */
+    width: 100%;  
+    justify-content: center;  
 }
 
 .planta {
