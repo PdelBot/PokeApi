@@ -92,6 +92,7 @@ body {
     border-radius: 45px;
     padding: 10px 20px;
     margin-bottom: 30px;
+    box-shadow: 7px 5px rgba(129, 129, 129, 0.55);
 }
 
 .titulo h1{
@@ -100,6 +101,7 @@ body {
     font-weight: bold;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #000000;
+
 }
 
 main {
@@ -133,6 +135,7 @@ main {
     left: 0;
     width: 100%; 
     height: auto;
+    
 }
 
 .info-title{
@@ -154,6 +157,7 @@ main {
     border-radius: 20px;
     padding: 15px;
     font-family: 'Pokefont';
+    box-shadow: 15px -12px #65656579;
 }
 
 .info-titulos ul{
@@ -163,6 +167,8 @@ main {
 
 .info-titulos ul:first-child{
     color: rgb(50, 156, 255);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #1783f7;
 }
 
 .info-text p {
@@ -185,6 +191,10 @@ main {
     margin-top: 40px;
 }
 
+.evolution h2{
+    font-size: 45px;
+}
+
 .evolution-line {
     display: flex;
     justify-content: space-around;
@@ -195,8 +205,27 @@ main {
     text-align: center;
 }
 
-.evolution-img {
+.evolution-stage #Squirtle{
     width: 100px;
+}
+
+.evolution-stage #Wartortle{
+    width: 230px;
+    margin-bottom: 40px;
+}
+
+.evolution-stage #Blastoise{
+    width: 150px;
+}
+
+.level p{
+    font-size: 25px;
+    color: #1783f7;
+    margin-bottom: 0;
+}
+
+.level i{
+    font-size: 35px;
 }
 
 .types {
@@ -220,9 +249,11 @@ main {
 .type:first-child {
     background-color: #007bff;
     color: white;
+    box-shadow: 7px 5px rgba(129, 129, 129, 0.55);
 }
 
 .type:last-child {
     background-color: #f0ad4e;
     color: white;
+    box-shadow: 7px 5px rgba(129, 129, 129, 0.55);
 }
