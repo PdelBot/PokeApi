@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Pokefont';
+    src: url('../fonts/Pokemon\ Classic.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: 'Subrayada';
+    src: url('../fonts/BubaDEMO-Shadow.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -74,8 +88,16 @@ body {
 .titulo{
     background-color: #1783f7;
     border: solid black ;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.911);
     border-radius: 35px;
+}
+
+.titulo h1{
+    text-transform: uppercase;
+    font-family: 'Pokefont';
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
 }
 
 main {
@@ -89,13 +111,30 @@ main {
     text-align: center;
 }
 
-.pokemon-img {
-    width: 300px;
-    margin: 30px;
+.imagenes{
+    position: relative;
+    width: 400px; 
+    height: 400px; 
+    margin-bottom: 50px;
+}
+
+.pokemon-img-pokeball {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+.pokemon-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: auto;
 }
 
 .info-text {
     margin-top: 20px;
+    background-color: rgb(196, 196, 196);
 }
 
 .info-text p {
@@ -133,14 +172,16 @@ main {
 .types {
     margin-top: 20px;
     text-align: center;
+    font-family: 'Subrayada';
 }
 
 .type {
-    padding: 10px 20px;
+    padding: 8px 30px;
     margin: 5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
+    font-size: 25px;
+    border: 1;
+    border-color: black;
+    border-radius: 35px;
     cursor: pointer;
 }
 
