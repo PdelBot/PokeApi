@@ -7,13 +7,13 @@ $(document).ready(function () {
    
   
     function getPokemonListV2() {
-      $("#data-content").html("https://media.tenor.com/YXS2BDyDWtwAAAAM/video-games-cargando.gif");
+      $(".pokemon-grid").html('<img src="../img/refresh giff.gif"></img>');
       $.ajax({
         url: "https://pokeapi.co/api/v2/pokemon",
         method: "GET",
       }).done(function (resp) {
         setTimeout(function () {
-          $("#data-content").html("");
+          $(".pokemon-grid").html("");
           var listadoPomemon = resp.results;
           listadoPomemon.forEach(function (pokemon) {
             var pokemonId = pokemon.url.split("/")[6];
@@ -26,7 +26,7 @@ $(document).ready(function () {
                 </div>
             </div>
 `;
-            $("#data-content").append(template);
+            $(".pokemon-grid").append(template);
           });
         }, 1000);
       });
@@ -34,4 +34,4 @@ $(document).ready(function () {
   });
 
 
-var template = `<p><a href="detail.html?pid=${pokemonId}"><h1 class="pokemon" pokemonid="1">${pokemon.name}</h1><img src="https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/${pokemonId}.png"</a></p>`;
+ 
