@@ -17,15 +17,17 @@ $(document).ready(function () {
           var listadoPomemon = resp.results;
           listadoPomemon.forEach(function (pokemon) {
             var pokemonId = pokemon.url.split("/")[6];
-            var template = ` 
-             <div class="pokemon-card">
+            var template = `
+              <a href="pokejeta.html?pid=${pokemonId}"> 
+              <div class="pokemon-card">
                 <div><p><Strong>${pokemon.name}</Strong></p></div>
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/refs/heads/master/sprites/pokemon/${pokemonId}.png" alt=${pokemon.name}>
                     <div class="tipos d-flex gap-2 align-items-center" >
                         <p class="pokemon-type agua">${pokemon.tipos}</p>
                 </div>
             </div>
-`;
+            </a>
+            `;
             $(".pokemon-grid").append(template);
           });
         }, 1000);
