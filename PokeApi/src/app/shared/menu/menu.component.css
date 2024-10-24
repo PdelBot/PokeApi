@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/*HEADER*/
+
+.logoPokemon{
+    background-color: #cc0000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoPokemon .logo img{
+    width: 250px;
+    height: 150px;
+}
+
+.logoPokemon .pokebola{
+    justify-content: right;
+}
+
+.logoPokemon .pokebola img{
+    width: 100px;
+    height: 100px;
+}
+
+.subNav {
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.subNav .content{
+    justify-content: left;
+    width: 60%;
+
+}
+
+.logo img {
+    width: 100px;
+}
+
+.titulo{
+    background-color: #1783f7;
+    border: solid black ;
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 35px;
+}
+
+ 
+
+
+
+ 

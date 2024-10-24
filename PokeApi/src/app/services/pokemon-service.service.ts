@@ -7,7 +7,7 @@ import { PokemonListResponse } from '../interfaces/pokemon.interfaces';
 @Injectable({
   providedIn: 'root'
 })
-export class PokemonServiceService {
+export class PokemonService {
 
 
   constructor(private http: HttpClient) { }
@@ -15,6 +15,5 @@ export class PokemonServiceService {
         getPokemonList(): Observable<PokemonListResponse> {
           return this.http.get<PokemonListResponse>(`https://pokeapi.co/api/v2/pokemon`);
         }
-
 
 }
