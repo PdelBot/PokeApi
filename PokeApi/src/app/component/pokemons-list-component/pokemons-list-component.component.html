@@ -1,11 +1,10 @@
-<main>
-        <section class="pokemon-grid">
-            <div class="pokemon-card">
-                <img src="" alt="ivysaur">
-                <div class="tipos d-flex gap-2 align-items-center" >
-                    <p class="pokemon-type planta">Planta</p>
-                    <p class="pokemon-type veneno">Veneno</p>
-                </div>
-            </div>
-        </section>
-</main>
+<section class="pokemon-grid">
+    @for(pokemon of pokemonList; track pokemon.name){
+    <div class="pokemon-card">
+        <img [src]="createImgUrl(getPokemonId(pokemon.url))" alt="ivysaur">
+        <div class="tipos d-flex gap-2 align-items-center">
+            <p>{{pokemon.name}}</p>
+        </div>
+    </div>
+    }
+</section>

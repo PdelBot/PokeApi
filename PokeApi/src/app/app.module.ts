@@ -8,12 +8,14 @@ import { MenuComponent } from './shared/menu/menu.component';
 import { PokemonsListComponentComponent } from './component/pokemons-list-component/pokemons-list-component.component';
 import { MaterialModule } from './material/material.module';
 import { provideHttpClient } from '@angular/common/http';
+import { PokemonDetailsComponent } from './component/pokemon-details/pokemon-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    PokemonsListComponentComponent
+    PokemonsListComponentComponent,
+    PokemonDetailsComponent
   ],
   imports: [
     BrowserModule,
