@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PokemonDetails } from '../../interfaces/pokemon-details.interfaces';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { PokemonService } from '../../services/pokemon-service.service';
 
 
 @Component({
@@ -13,29 +14,33 @@ export class PokemonDetailsComponent implements OnInit {
   
   pokemonDetails : PokemonDetails = {} as PokemonDetails;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, private http : HttpClient){}
+  constructor(private servicioPokemon: PokemonService ,private activatedRoute: ActivatedRoute, private router: Router, private http : HttpClient){}
 
-  idPoke: string | null = ""; 
+  idPoke: string | null= ""; 
 
-  getPokemonDetails(id: number){
+  abilities: string [] = []
 
-    return this.http.get<PokemonDetails>(`https://pokeapi.co/api/v2/pokemon/${id}`);
-
-  }
+  types: string [] = []
+  
   
   ngOnInit(): void {
-    /*
-    this.activatedRoute.paramMap.subscribe(poke =>{
+    
+    
+    this.idPoke = this.activatedRoute.snapshot.paramMap.get('id');
 
-      this.idPoke = poke.get('id');      
+    this.servicioPokemon.getPokemonDetails(+(this.idPoke!)).subscribe(poke =>{
+      this.pokemonDetails = poke;
 
-      if (this.idPoke !== null && !isNaN(+this.idPoke)){
-        this.getPokemonDetails(+this.idPoke).subscribe(poke: PokemonDetails => {
-          this.pokemonDetails = poke;
-        })
-      }
+      this.abilities = this.pokemonDetails.abilities.map(poke => poke.ability.name)
+
+      this.types = this.pokemonDetails.types.map(poke => poke.type.name)
     })
-      */
+
   }
+
+   createUrl (){
+
+    return this.servicioPokemon.createImgUrl(+(this.idPoke!));
+   }
   
 }

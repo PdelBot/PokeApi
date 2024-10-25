@@ -11,6 +11,8 @@ export class PokemonsListComponentComponent implements OnInit{
 
         pokemonList: Pokemon[] = [];
 
+        types: string [] = [];
+
         constructor (private pokemonService : PokemonService) {}
 
   ngOnInit(): void {
@@ -25,9 +27,9 @@ export class PokemonsListComponentComponent implements OnInit{
 
   };
 
-  createImgUrl(id: number): string{
+  createImgUrl(id: number): string {
 
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+    return this.pokemonService.createImgUrl(id);
 
   }
 
