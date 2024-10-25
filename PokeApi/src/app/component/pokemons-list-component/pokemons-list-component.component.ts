@@ -32,5 +32,4 @@ export class PokemonsListComponentComponent implements OnInit{
     return this.pokemonService.createImgUrl(id);
 
   }
-
 }

@@ -1,0 +1,6 @@
+<section class="pokemon-grid">
+    @for(pokeball of pokebolaList; track pokeball){
+    <app-card-pokeball [pokeballId]="getPokeballId(pokeball.url)"></app-card-pokeball>
+  
+    }
+</section>
