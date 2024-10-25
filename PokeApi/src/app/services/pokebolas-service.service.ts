@@ -12,7 +12,7 @@ export class PokebolasService {
   constructor(private http: HttpClient) { }
 
   getPokeball(): Observable<ItemListResponse> {
-  return this.http.get<ItemListResponse>(`https://pokeapi.co/api/v2/item/`);
+  return this.http.get<ItemListResponse>(`https://pokeapi.co/api/v2/item/?limit=16`);
   }
 
   get1Pokeball(id: number): Observable<ItemDetailResponse> {

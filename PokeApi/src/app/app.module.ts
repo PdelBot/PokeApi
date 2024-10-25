@@ -12,6 +12,7 @@ import { PokemonDetailsComponent } from './component/pokemon-details/pokemon-det
 import { PokeballsDetailsComponent } from './component/pokeballs-details/pokeballs-details.component';
 import { PokebolasComponent } from './component/pokebolas/pokebolas.component';
 import { CardPokeballComponent } from './component/card-pokeball/card-pokeball.component';
+import { TablaTiposComponent } from './component/tabla-tipos/tabla-tipos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CardPokeballComponent } from './component/card-pokeball/card-pokeball.c
     PokemonDetailsComponent,
     PokeballsDetailsComponent,
     PokebolasComponent,
-    CardPokeballComponent
+    CardPokeballComponent,
+    TablaTiposComponent
   ],
   imports: [
     BrowserModule,
