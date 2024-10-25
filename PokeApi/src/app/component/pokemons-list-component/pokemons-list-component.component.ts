@@ -30,5 +30,4 @@ export class PokemonsListComponentComponent implements OnInit{
     return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 
   }
-
 }

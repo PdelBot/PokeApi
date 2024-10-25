@@ -9,13 +9,19 @@ import { PokemonsListComponentComponent } from './component/pokemons-list-compon
 import { MaterialModule } from './material/material.module';
 import { provideHttpClient } from '@angular/common/http';
 import { PokemonDetailsComponent } from './component/pokemon-details/pokemon-details.component';
+import { PokeballsDetailsComponent } from './component/pokeballs-details/pokeballs-details.component';
+import { PokebolasComponent } from './component/pokebolas/pokebolas.component';
+import { CardPokeballComponent } from './component/card-pokeball/card-pokeball.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     PokemonsListComponentComponent,
-    PokemonDetailsComponent
+    PokemonDetailsComponent,
+    PokeballsDetailsComponent,
+    PokebolasComponent,
+    CardPokeballComponent
   ],
   imports: [
     BrowserModule,
