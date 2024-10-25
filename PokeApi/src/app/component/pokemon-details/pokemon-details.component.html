@@ -1,11 +1,74 @@
-<div class="imagenPoke d-flex flex-column col-3 align-items-center">
-    <div class="imagenes">
-        <img class="pokemon-img-pokeball" [src]="" alt="pokebola">
-        <img src="../img/pngegg.png" alt="Squirtle Flow mode" class="pokemon-img">
+<div class="d-flex">
+    <div class="imagenPoke d-flex flex-column col-3 align-items-center">
+        <div class="imagenes">
+            <img class="pokemon-img-pokeball"
+                src="https://images.seeklogo.com/logo-png/52/2/pokemon-pokeball-legue-logo-png_seeklogo-524672.png"
+                alt="pokebola">
+            <img [src]="createUrl()" alt="{{pokemonDetails.name}}" class="pokemon-img">
+        </div>
+        <div class="types d-flex gap-2">
+            @for(type of pokemonDetails.types ; track type.type.name){
+
+            <h1 class="type" id="{{type.type.name}}">{{type.type.name}}</h1>
+
+            }
+        </div>
+
     </div>
-   
-    <section class="types">
-        <button class="type">AGUA</button>
-        <button class="type">FLOW</button>
-    </section>
+    <div class="texto d-flex flex-column justify-content-center align-items-center col-9 mt-4">
+        <div class="titulo d-flex justify-content-center align-items-center w-50">
+            <h1>Nº{{pokemonDetails.id}} {{pokemonDetails.name}}</h1>
+        </div>
+        <div class="info-section w-75">
+
+            <div class="info-text mt-4">
+                <div class="info-title d-flex">
+                    <img src="https://cdn-icons-png.flaticon.com/512/188/188940.png" alt="pokedex">
+                    <h1>Info</h1>
+                    <img src="https://cdn-icons-png.flaticon.com/512/188/188940.png" alt="pokedex">
+                </div>
+                <div class="info-titulos d-flex flex-column align-items-center">
+                    <ul class="d-flex">
+                        <li>Altura:</li>
+                        <li>Peso: </li>
+                        <li>Habilidad: </li>
+                    </ul>
+                    <ul class="d-flex gap-4">
+                        <li>{{pokemonDetails.height}} m</li>
+                        <li>{{pokemonDetails.weight}} kg</li>
+                        <li>
+                            @for (ability of abilities; track ability.indexOf(ability)) {
+                                <p>{{ability | titlecase}}</p>
+                            }
+                        </li>
+                    </ul>
+                </div>
+                <section class="evolution d-flex gap-4 w-100 align-items-center ">
+                    <div class="anterior">
+                        
+                        @if (pokemonDetails.id>1) {
+                            <h3>Pokemon Anterior</h3>
+                            <div class="evolution-stage">
+                                <img [src]="createUrlAnt()" alt="Ant" class="evolution-img">
+                                <h4>Nº {{pokemonDetails.id-1}}</h4>
+                            </div>
+                        }
+                    </div>
+                    <div class="siguiente">
+                        
+                        @if (pokemonDetails.id<1025) {
+                            <h3>Pokemon Siguiente</h3>
+                            <div class="evolution-stage">
+                                <img [src]="createUrlSig()" alt="Sig"
+                                    class="evolution-img">
+                                <h4>Nº {{pokemonDetails.id+1}}</h4>
+                            </div>
+                        }
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+
 </div>

@@ -42,5 +42,18 @@ export class PokemonDetailsComponent implements OnInit {
 
     return this.servicioPokemon.createImgUrl(+(this.idPoke!));
    }
+
+   getCries (){
+    return this.http.get(this.pokemonDetails.cries.latest)
+   }
   
+   createUrlSig(){
+    const id: number = +(this.idPoke!);
+    return this.servicioPokemon.createImgUrl(id+1);
+   }
+
+   createUrlAnt(){
+    const id: number = +(this.idPoke!);
+    return this.servicioPokemon.createImgUrl(id-1);
+   }
 }
